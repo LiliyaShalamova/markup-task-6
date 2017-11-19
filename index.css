@@ -1,0 +1,534 @@
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns:
+    250px 1fr 1fr 1fr 250px;
+    margin-top: 40px;
+    margin-left:  auto;
+    margin-right:  auto;
+    grid-template-rows:
+   	220px 100px 110px 220px 220px;/*2fr 1fr 1fr 2fr 2fr;*/
+}
+
+.wrapper-inside
+{
+	display: grid;
+    width: 100%;
+    grid-template-columns:
+    1fr 1fr 1fr;
+    grid-template-rows:
+   	220px 220px;/*2fr 1fr 1fr 2fr 2fr*/
+   	grid-column: 2/5;
+   	grid-row: 4/6;
+   	grid-column-gap: 10px;
+   	grid-row-gap: 10px;
+}
+
+body
+{
+	margin: 0;
+	width: 95%;
+	padding: 15px 15px 50px 15px;
+	max-width: 1280px;
+	min-width: 1280px;
+}
+
+.news
+{
+	grid-column: 2/4;
+	grid-row: 1/2;
+
+}
+
+.news li a
+{
+	text-decoration: none;
+	color: black;
+}
+
+.news > a
+{
+	text-decoration: none;
+	color: #0400ff;
+	margin-right: 5px;
+	font-size: 17px;
+}
+
+.news > a:first-child
+{
+	font-weight: bold;
+}
+
+.news > a:nth-child(2)
+{
+	opacity: .5;
+}
+
+.news ul ~ a
+{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+.news ul ~ a  + span
+{
+	font-weight: normal;
+}
+
+.news ul ~ a:last-child
+{
+	color: gray;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.date
+{
+	color: gray;
+	font-size: 13px;
+}
+
+.yandex:first-letter
+{
+	color: red;
+}
+
+.search
+{
+	grid-column: 2/5;
+	grid-row: 2/3;
+	padding-top: 15px;
+}
+
+.search a
+{
+	display: inline-block;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 15px 10px 0;
+}
+
+.yandex
+{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	text-align: right;
+	font-size: 40px;
+	padding-right: 20px;
+	height: 100px;
+	line-height: 100px;
+}
+
+form,
+button
+{
+	background: yellow;
+	border: 3px solid yellow;
+}
+
+input
+{
+	width: 90%;
+	border: 2px solid yellow;
+}
+input:focus
+{
+	outline: 0;
+}
+
+form
+{
+	grid-column: 2/5;
+	grid-row: 2/3;
+	width: 100%;
+}
+
+button
+{
+	width: 5%;
+}
+
+button:focus
+{
+	outline: 0;
+}
+
+.d
+{
+	grid-column: 4/5;
+	grid-row: 1/2;
+	text-align: center;
+}
+.d a
+{
+	display: block;
+}
+
+.g
+{
+	grid-column: 2/5;
+	grid-row: 3/4;
+}
+.g img
+{
+	width: 85%;
+}
+
+.search span
+{
+	color: gray;
+}
+
+.char
+{
+	width: 20px;
+	height: 20px;
+	transform: rotate(-45deg);
+	display: inline-block;
+}
+
+.city
+{
+	color: gray;
+}
+.mail
+{
+	box-shadow: 0 0 2px rgba(0,0,0,0.5);
+	padding: 5px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 200px;
+	border-radius: 2%;
+}
+
+.mail:first-letter
+{
+	color: red;
+}
+
+.mail a
+{
+	text-decoration: none;
+	color: black;
+}
+
+.mail a:first-child
+{
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.mail img
+{
+	width: 45px;
+	vertical-align: top;
+	margin-left: 10px;
+}
+
+
+.count
+{
+	font-weight: bold;
+}
+
+.d div
+{
+	width: 150px;
+	display: inline-block;
+	text-align: left;
+}
+
+.d div a
+{
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100%;
+}
+
+ul
+{
+	padding: 0;
+	margin-bottom: 0;
+}
+
+li
+{
+	margin-bottom: 2px;
+}
+
+body a:hover
+{
+	color: #cc0808;
+}
+
+.style a
+{
+	text-decoration: none;
+	color: #0054b9;
+	font-family: sans-serif;
+}
+
+.style h1 a
+{
+	font-size: 16px;
+}
+
+.style ul a
+{
+	font-size: 12px;
+}
+
+h1
+{
+	margin: 0;
+	font-size: 16px;
+}
+
+.style ul
+{
+	list-style: none;
+}
+
+.style ul a
+{
+	color: black;
+}
+
+.services .bold
+{
+	font-weight: bold;
+}
+
+.style li
+{
+	margin-bottom: 5px;
+}
+
+.time,
+.program
+{
+	margin-right: 5px;
+}
+
+.tv-program a.channel
+{
+	color: gray; 
+}
+
+.tv-program button
+{
+	border: none;
+	cursor: pointer;
+	width: auto;
+	margin-left: 5px;
+	color: white;
+	border-radius: 5px;
+	background: linear-gradient(to right,#00a3fa,#716ef8);
+	padding: 5px;
+}
+
+.weather img
+{
+	width: 30px;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+
+.poster .category
+{
+	margin-left: 5px;
+	color: gray;
+}
+
+.shadow
+{
+	position: relative;
+}
+
+.auto
+{
+	height: 200px;
+	overflow: scroll;
+}
+
+.shadow .shadow-top
+{
+	position: absolute;
+	background: linear-gradient(#ffffe7, #fff);
+	opacity: .8;
+	height: 15px;
+	top: 12%;
+	left: 0;
+	right: 0;
+}
+
+.shadow h1
+{
+	margin-top: 5px;
+	margin-bottom: 4px;
+}
+
+.shadow .shadow-bottom
+{
+	position: absolute;
+	background: linear-gradient(#fff, #ffffe7);
+	opacity: .8;
+	height: 15px;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+}
+
+.auto .time
+{
+	margin-left: 5px;
+	color: gray;
+	font-size: 13px;
+}
+
+.auto::-webkit-scrollbar
+{
+	width: 0;
+}
+
+.auto
+{
+	-ms-overflow-style: none;
+}
+.jokes .category
+{
+	margin-left: 5px;
+	font-size: 13px;
+}
+
+.jokes p
+{
+	margin: 0;
+}
+
+.jokes input[id="1"]:checked ~ .joke1,
+.jokes input[id="2"]:checked ~ .joke2,
+.jokes input[id="3"]:checked ~ .joke3,
+.jokes input[id="4"]:checked ~ .joke4,
+.jokes input[id="5"]:checked ~ .joke5,
+.jokes input[id="1"]:checked ~ label[for="2"],
+.jokes input[id="2"]:checked ~ label[for="3"],
+.jokes input[id="3"]:checked ~ label[for="4"],
+.jokes input[id="4"]:checked ~ label[for="5"],
+.jokes input[id="5"]:checked ~ label[for="1"]
+{
+	display: block;
+}
+
+.jokes input[id="1"]:checked ~ p:not([class*="1"]),
+.jokes input[id="2"]:checked ~ p:not([class*="2"]),
+.jokes input[id="3"]:checked ~ p:not([class*="3"]),
+.jokes input[id="4"]:checked ~ p:not([class*="4"]),
+.jokes input[id="5"]:checked ~ p:not([class*="5"]),
+.jokes input[id="1"]:checked ~ label:not([for="2"]),
+.jokes input[id="2"]:checked ~ label:not([for="3"]),
+.jokes input[id="3"]:checked ~ label:not([for="4"]),
+.jokes input[id="4"]:checked ~ label:not([for="5"]),
+.jokes input[id="5"]:checked ~ label:not([for="1"])
+{
+	display: none;
+}
+
+.jokes .joke-switcher
+{
+	width: auto;
+	margin-top: 20px;
+	background: white;
+	border: none;
+	cursor: pointer;
+	color: #0054b9;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.jokes input
+{
+	display: none;
+}
+
+.jokes .joke-switcher:before
+{
+	content: '\27F3';
+	font-weight: bold;
+	margin-right: 5px;
+	font-size: 15px;
+}
+
+.jokes h1
+{
+	margin-bottom: 10px;
+}
+
+.settings
+{
+	width: 100px;
+	position: absolute;
+	right: 250px;
+	top: 10px;
+}
+
+.settings > input
+{
+	display: none;
+}
+
+.settings > label
+{
+	cursor: pointer;
+}
+
+.settings > input:checked ~ .popup
+{
+	display: block;
+}
+
+
+
+.popup
+{
+	background: white;
+	width: 200px;
+	position: absolute;
+	top: 40px;
+	left: -60px;
+	border: 1px solid #ccc;
+	padding: 15px 10px 10px 10px;
+	display: none;
+}
+.popup .popup-tail
+{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background: white;
+	top: -16px;
+	left: 85px;
+	transform: rotate(-45deg);
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc; 
+}
+
+.popup input
+{
+	display: inline-block;
+}
+
+.settings-list input
+{
+	width: 15px;
+}
+
+.settings .wrapper-settings
+{
+	position: relative;
+}
