@@ -6,6 +6,30 @@
     <title>Задача «Морда»</title>
 </head>
 <body>
+	<input type="checkbox" id="set" class="settings">
+	<div class="settings">
+		<label for="set">Настройки</label>
+		<div class="popup" id="popup">
+			<div class="popup-tail"></div>
+			<div class="wrapper-settings">
+				<div class="settings-list">
+				</div>
+			</div>
+		</div>
+	</div>
+	<input id="services" type="checkbox" class="visited" checked>
+	<label for="services">Посещаемое</label><br>
+	<input type="checkbox" id="tv" checked>
+	<label for="tv">Телепрограмма</label><br>
+	<input type="checkbox" id="auto" checked>
+	<label for="auto">Автомобильные новости</label><br>
+	<input type="checkbox" id="weather" checked>
+	<label for="weather">Погода</label><br>
+	<input type="checkbox" id="poster" checked>
+	<label for="poster">Афиша</label><br>
+	<input type="checkbox" id="jokes" checked>
+	<label for="jokes">Анектоды</label>
+
 	<div class="city"><div class="char">&#10148;</div> Екатеринбург</div>
 	<div class="wrapper">
 	    <div class="search">
@@ -184,29 +208,6 @@
 	    <img src="3.png">
 	    <a href="#">Почта <span class="count">138</span></a><br>
 	    <a href="#">Написать письмо</a>
-	</div>
-	<div class="settings">
-		<input type="checkbox" id="set">
-		<label for="set">Настройки</label>
-		<div class="popup" id="popup">
-			<div class="popup-tail"></div>
-			<div class="wrapper-settings">
-				<div class="settings-list">
-					<input id="services" type="checkbox" class="visited" checked>
-					<label for="services">Посещаемое</label><br>
-					<input type="checkbox" id="tv" checked>
-					<label for="tv">Телепрограмма</label><br>
-					<input type="checkbox" id="auto" checked>
-					<label for="auto">Автомобильные новости</label><br>
-					<input type="checkbox" id="weather" checked>
-					<label for="weather">Погода</label><br>
-					<input type="checkbox" id="poster" checked>
-					<label for="poster">Афиша</label><br>
-					<input type="checkbox" id="jokes" checked>
-					<label for="jokes">Анектоды</label>
-				</div>
-			</div>
-		</div>
 	</div>
 </body>
 </html>

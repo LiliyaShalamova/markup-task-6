@@ -477,7 +477,7 @@ h1
 	top: 10px;
 }
 
-.settings > input
+input.settings
 {
 	display: none;
 }
@@ -487,12 +487,16 @@ h1
 	cursor: pointer;
 }
 
-.settings > input:checked ~ .popup
+input.settings:checked + .settings .popup
 {
 	display: block;
 }
 
-
+input.settings:checked ~ input,
+input.settings:checked ~ label
+{
+	display: block;
+}
 
 .popup
 {
@@ -504,6 +508,7 @@ h1
 	border: 1px solid #ccc;
 	padding: 15px 10px 10px 10px;
 	display: none;
+	z-index: 10;
 }
 .popup .popup-tail
 {
@@ -521,6 +526,7 @@ h1
 .popup input
 {
 	display: inline-block;
+	z-index: 0;
 }
 
 .settings-list input
@@ -531,4 +537,91 @@ h1
 .settings .wrapper-settings
 {
 	position: relative;
+}
+
+.settings-list
+{
+	height: 150px;
+}
+
+input[id="services"]:not(:checked) ~ .wrapper .wrapper-inside .services
+{
+	display: none;
+}
+
+input[id="tv"]:not(:checked) ~ .wrapper .wrapper-inside .tv-program
+{
+	display: none;
+}
+
+input[id="auto"]:not(:checked) ~ .wrapper .wrapper-inside .shadow
+{
+	display: none;
+}
+
+input[id="weather"]:not(:checked) ~ .wrapper .wrapper-inside .weather
+{
+	display: none;
+}
+
+input[id="poster"]:not(:checked) ~ .wrapper .wrapper-inside .poster
+{
+	display: none;
+}
+
+input[id="jokes"]:not(:checked) ~ .wrapper .wrapper-inside .jokes
+{
+	display: none;
+}
+
+input[id="services"],
+label[for="services"]
+{
+	top: 90px;
+}
+
+input[id="tv"],
+label[for="tv"]
+{
+	top: 110px;
+}
+
+input[id="auto"],
+label[for="auto"]
+{
+	top: 130px;
+}
+
+input[id="weather"],
+label[for="weather"]
+{
+	top: 150px;
+}
+
+input[id="poster"],
+label[for="poster"]
+{
+	top: 170px;
+}
+
+input[id="jokes"],
+label[for="jokes"]
+{
+	top: 190px;
+}
+
+body > input,
+body > label
+{
+	width: 15px;
+	display: none;
+	position: absolute;
+	right: 200px;
+	z-index: 100;
+}
+
+body > label
+{
+	width: 210px;
+	right: 180px;
 }
