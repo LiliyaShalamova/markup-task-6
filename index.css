@@ -1,713 +1,725 @@
-.wrapper {
+.wrapper
+{
     display: grid;
-    grid-template-columns:
-    200px 1fr 1fr 1fr 200px;
+    grid-template-columns: 200px 1fr 1fr 1fr 200px;
     margin-top: -30px;
-    margin-left:  auto;
-    margin-right:  auto;
-    grid-template-rows:
-   	220px 100px 110px 220px 220px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: 220px 100px 110px 220px 220px;
 }
 
-
-input[class="column1"]:not(:checked) ~ input[class="column1"]:not(:checked) ~ .wrapper #inside #column-1
+.column1:not(:checked) ~ .column1:not(:checked) ~ .wrapper #column-1
 {
-	display: none;
+    display: none;
 }
 
-input[class="column2"]:not(:checked) ~ input[class="column2"]:not(:checked) ~ .wrapper #inside #column-2
+.column2:not(:checked) ~ .column2:not(:checked) ~ .wrapper #column-2
 {
-	display: none;
+    display: none;
 }
 
 .wrapper-inside
 {
-	display: grid;
+    display: grid;
     width: 100%;
-    grid-template-columns:
-    1fr 1fr 1fr;
-   	grid-column: 2/5;
-   	grid-row: 4/6;
-   	grid-column-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 2/5;
+    grid-row: 4/6;
+    grid-column-gap: 20px;
 }
 
 html
 {
-	margin: 0 auto;
-	max-width: 1280px;
-	min-width: 1280px;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 1280px;
 }
 
 .news
 {
-	grid-column: 2/4;
-	grid-row: 1/2;
+    grid-column: 2/4;
+    grid-row: 1/2;
 
 }
 
 .news li a
 {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: #000;
 }
 
 .news > a
 {
-	text-decoration: none;
-	color: #0400ff;
-	margin-right: 5px;
-	font-size: 17px;
+    text-decoration: none;
+    color: #0400ff;
+    margin-right: 5px;
+    font-size: 17px;
 }
 
 .news > a:first-child
 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .news > a:nth-child(2)
 {
-	opacity: .5;
+    opacity: .5;
 }
 
 .news ul ~ a
 {
-	text-decoration: none;
-	color: black;
-	font-weight: bold;
-	font-family: sans-serif;
-	font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 15px;
 }
 
 .news li
 {
-	margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 
-.news ul ~ a  + span
+.news ul ~ a + span
 {
-	font-weight: normal;
+    font-weight: normal;
 }
 
 .news ul ~ a:last-child
 {
-	color: gray;
-	font-weight: bold;
-	margin-left: 10px;
+    color: #808080;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 .date
 {
-	color: gray;
-	font-size: 13px;
+    color: #808080;
+    font-size: 13px;
 }
 
-.yandex:first-letter
+.img-yandex
 {
-	color: red;
+    vertical-align: middle;
 }
 
 .search
 {
-	grid-column: 2/5;
-	grid-row: 2/3;
-	padding-top: 15px;
+    grid-column: 2/5;
+    grid-row: 2/3;
+    padding-top: 15px;
 }
 
 .search a
 {
-	display: inline-block;
-	text-decoration: none;
-	font-weight: bold;
-	margin: 0 15px 10px 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px 10px 0;
 }
 
 .yandex
 {
-	grid-column: 1/2;
-	grid-row: 2/3;
-	text-align: right;
-	font-size: 40px;
-	padding-right: 20px;
-	height: 100px;
-	line-height: 100px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: right;
+    font-size: 40px;
+    padding-right: 20px;
+    height: 100px;
+    line-height: 100px;
 }
 
-form,
-button
+.search form,
+.search button
 {
-	background: yellow;
-	border: 3px solid yellow;
+    background: yellow;
+    border: 3px solid yellow;
 }
 
-input
+.search input
 {
-	width: 90%;
-	border: 2px solid yellow;
-}
-input:focus
-{
-	outline: 0;
+    width: 90%;
+    border: 2px solid yellow;
 }
 
-form
+.search input:focus
 {
-	grid-column: 2/5;
-	grid-row: 2/3;
-	width: 100%;
+    outline: 0;
 }
 
-button
+.search form
 {
-	width: 5%;
+    grid-column: 2/5;
+    grid-row: 2/3;
+    width: 100%;
 }
 
-button:focus
+.search button
 {
-	outline: 0;
+    width: 5%;
 }
 
-.d
+.search button:focus
 {
-	grid-column: 4/5;
-	grid-row: 1/2;
-	text-align: center;
-}
-.d a
-{
-	display: block;
+    outline: 0;
 }
 
-.g
+.mini-advertising
 {
-	grid-column: 2/5;
-	grid-row: 3/4;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    text-align: center;
 }
-.g img
+
+.mini-advertising a
 {
-	width: 85%;
+    display: block;
+}
+
+.advertising
+{
+    grid-column: 2/5;
+    grid-row: 3/4;
+}
+
+.advertising img
+{
+    width: 85%;
 }
 
 .search span
 {
-	color: gray;
+    color: #808080;
 }
 
-.char
+.city .char
 {
-	width: 20px;
-	height: 20px;
-	transform: rotate(-45deg);
-	display: inline-block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    display: inline-block;
 }
 
 .city
 {
-	color: gray;
-	position: absolute;
-	top: 10px;
-	left: 10px;
+    color: #808080;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
+
 .mail
 {
-	box-shadow: 0 0 2px rgba(0,0,0,0.5);
-	padding: 5px;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 200px;
-	border-radius: 2%;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    border-radius: 2%;
 }
 
 .mail:first-letter
 {
-	color: red;
+    color: #f00;
 }
 
 .mail a
 {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: #000;
 }
 
 .mail a:first-child
 {
-	font-weight: bold;
-	font-size: 17px;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .mail img
 {
-	width: 45px;
-	vertical-align: top;
-	margin-left: 10px;
+    width: 45px;
+    vertical-align: top;
+    margin-left: 10px;
 }
-
 
 .count
 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
-.d div
+.mini-advertising div
 {
-	width: 150px;
-	display: inline-block;
-	text-align: left;
+    width: 150px;
+    display: inline-block;
+    text-align: left;
 }
 
-.d div a
+.mini-advertising div a
 {
-	text-decoration: none;
-	font-size: 20px;
-	font-weight: bold;
-	width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
 }
 
 ul
 {
-	padding: 0;
-	margin-bottom: 0;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 li
 {
-	margin-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 body
 {
-	position: relative;
+    position: relative;
 }
 
 body a:hover
 {
-	color: #cc0808;
+    color: #cc0808;
 }
 
 .style a
 {
-	text-decoration: none;
-	color: #0054b9;
-	font-family: sans-serif;
+    text-decoration: none;
+    color: #0054b9;
+    font-family: sans-serif;
 }
 
 .style h1 a
 {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .style ul a
 {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 h1
 {
-	margin: 0;
-	font-size: 16px;
+    margin: 0;
+    font-size: 16px;
 }
 
 .style ul
 {
-	list-style: none;
-	margin-top: 10px;
+    list-style: none;
+    margin-top: 10px;
 }
 
 .style ul a
 {
-	color: black;
+    color: #000;
 }
 
 .services .bold
 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .services,
 .poster
 {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .style li
 {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .time,
 .program
 {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 .tv-program a.channel
 {
-	color: gray; 
+    color: #808080;
 }
 
 .tv-program,
 .weather,
 .map
 {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .tv-program button
 {
-	border: none;
-	cursor: pointer;
-	width: auto;
-	margin-left: 5px;
-	color: white;
-	border-radius: 5px;
-	background: linear-gradient(to right,#00a3fa,#716ef8);
-	padding: 5px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    margin-left: 5px;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(to right,#00a3fa,#716ef8);
+    padding: 5px;
 }
 
 .tv-program button:hover
 {
-	transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .weather img
 {
-	width: 30px;
-	vertical-align: middle;
-	margin: 0 5px;
+    width: 30px;
+    vertical-align: middle;
+    margin: 0 5px;
 }
 
 .poster .category
 {
-	margin-left: 5px;
-	color: gray;
+    margin-left: 5px;
+    color: #808080;
 }
 
 .shadow
 {
-	position: relative;
+    position: relative;
 }
 
 .auto
 {
-	height: 200px;
-	overflow: scroll;
+    height: 200px;
+    overflow: scroll;
 }
 
 .shadow .shadow-top
 {
-	position: absolute;
-	background: linear-gradient(#f7f8f9, #fff);
-	opacity: .8;
-	height: 20px;
-	top: 10%;
-	left: 0;
-	right: 0;
+    position: absolute;
+    background: linear-gradient(#f7f8f9, #fff);
+    opacity: .8;
+    height: 20px;
+    top: 10%;
+    left: 0;
+    right: 0;
 }
 
 .shadow h1
 {
-	margin-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .shadow .shadow-bottom
 {
-	position: absolute;
-	background: linear-gradient(#fff, #f7f8f9);
-	opacity: .8;
-	height: 20px;
-	bottom: 15px;
-	left: 0;
-	right: 0;
+    position: absolute;
+    background: linear-gradient(#fff, #f7f8f9);
+    opacity: .8;
+    height: 20px;
+    bottom: 15px;
+    left: 0;
+    right: 0;
 }
 
 .auto .time
 {
-	margin-left: 5px;
-	color: gray;
-	font-size: 13px;
+    margin-left: 5px;
+    color: #808080;
+    font-size: 13px;
 }
+/*Hiding Vertical Scrollbars in Chrome and Safari*/
 
 .auto::-webkit-scrollbar
 {
-	width: 0;
+    width: 0;
 }
+
+/*Hiding Vertical Scrollbars in IE 10+*/
 
 .auto
 {
-	-ms-overflow-style: none;
+    -ms-overflow-style: none;
 }
+
+/*Hiding Vertical Scrollbars in Firefox*/
+
+.auto
+{
+    overflow: -moz-scrollbars-none;
+}
+
 .jokes .category
 {
-	margin-left: 5px;
-	font-size: 13px;
+    margin-left: 5px;
+    font-size: 13px;
 }
 
 .jokes p
 {
-	margin: 0;
+    margin: 0;
 }
 
-.jokes input[id="1"]:checked ~ .joke1,
-.jokes input[id="2"]:checked ~ .joke2,
-.jokes input[id="3"]:checked ~ .joke3,
-.jokes input[id="4"]:checked ~ .joke4,
-.jokes input[id="5"]:checked ~ .joke5,
-.jokes input[id="1"]:checked ~ label[for="2"],
-.jokes input[id="2"]:checked ~ label[for="3"],
-.jokes input[id="3"]:checked ~ label[for="4"],
-.jokes input[id="4"]:checked ~ label[for="5"],
-.jokes input[id="5"]:checked ~ label[for="1"]
+.jokes input[id='1']:checked ~ .joke1,
+.jokes input[id='2']:checked ~ .joke2,
+.jokes input[id='3']:checked ~ .joke3,
+.jokes input[id='4']:checked ~ .joke4,
+.jokes input[id='5']:checked ~ .joke5,
+.jokes input[id='1']:checked ~ label[for='2'],
+.jokes input[id='2']:checked ~ label[for='3'],
+.jokes input[id='3']:checked ~ label[for='4'],
+.jokes input[id='4']:checked ~ label[for='5'],
+.jokes input[id='5']:checked ~ label[for='1']
 {
-	display: block;
+    display: block;
 }
 
-.jokes input[id="1"]:checked ~ p:not([class*="1"]),
-.jokes input[id="2"]:checked ~ p:not([class*="2"]),
-.jokes input[id="3"]:checked ~ p:not([class*="3"]),
-.jokes input[id="4"]:checked ~ p:not([class*="4"]),
-.jokes input[id="5"]:checked ~ p:not([class*="5"]),
-.jokes input[id="1"]:checked ~ label:not([for="2"]),
-.jokes input[id="2"]:checked ~ label:not([for="3"]),
-.jokes input[id="3"]:checked ~ label:not([for="4"]),
-.jokes input[id="4"]:checked ~ label:not([for="5"]),
-.jokes input[id="5"]:checked ~ label:not([for="1"])
+.jokes input[id='1']:checked ~ p:not([class*='1']),
+.jokes input[id='2']:checked ~ p:not([class*='2']),
+.jokes input[id='3']:checked ~ p:not([class*='3']),
+.jokes input[id='4']:checked ~ p:not([class*='4']),
+.jokes input[id='5']:checked ~ p:not([class*='5']),
+.jokes input[id='1']:checked ~ label:not([for='2']),
+.jokes input[id='2']:checked ~ label:not([for='3']),
+.jokes input[id='3']:checked ~ label:not([for='4']),
+.jokes input[id='4']:checked ~ label:not([for='5']),
+.jokes input[id='5']:checked ~ label:not([for='1'])
 {
-	display: none;
+    display: none;
 }
 
 .jokes .joke-switcher
 {
-	width: auto;
-	margin-top: 20px;
-	background: white;
-	border: none;
-	cursor: pointer;
-	color: #0054b9;
-	display: inline-block;
-	font-weight: bold;
+    width: auto;
+    margin-top: 20px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    color: #0054b9;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .jokes input
 {
-	display: none;
+    display: none;
 }
 
 .jokes .joke-switcher:before
 {
-	content: '\27F3';
-	font-weight: bold;
-	margin-right: 5px;
-	font-size: 15px;
+    content: '\27F3';
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 15px;
 }
 
 .jokes h1
 {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .settings
 {
-	width: 100px;
-	position: absolute;
-	right: 250px;
-	top: 10px;
+    width: 100px;
+    position: absolute;
+    right: 250px;
+    top: 10px;
 }
 
 input.settings
 {
-	display: none;
+    display: none;
 }
 
 .settings > label
 {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 input.settings:checked + .settings .popup
 {
-	display: block;
+    display: block;
 }
 
 input.settings:checked ~ input,
 input.settings:checked ~ label
 {
-	display: block;
+    display: block;
 }
 
 .popup
 {
-	background: white;
-	width: 200px;
-	position: absolute;
-	top: 40px;
-	left: -60px;
-	border: 1px solid #ccc;
-	padding: 15px 10px 10px 10px;
-	display: none;
-	z-index: 10;
+    background: white;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    left: -60px;
+    border: 1px solid #ccc;
+    padding: 15px 10px;
+    display: none;
+    z-index: 10;
 }
+
 .popup .popup-tail
 {
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	background: white;
-	top: -16px;
-	left: 85px;
-	transform: rotate(-45deg);
-	border-top: 1px solid #ccc;
-	border-right: 1px solid #ccc; 
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: white;
+    top: -16px;
+    left: 85px;
+    transform: rotate(-45deg);
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
 }
 
 .popup input
 {
-	display: inline-block;
-	z-index: 0;
+    display: inline-block;
+    z-index: 0;
 }
 
 .settings-list input
 {
-	width: 15px;
+    width: 15px;
 }
 
 .settings .wrapper-settings
 {
-	position: relative;
+    position: relative;
 }
 
 .settings-list
 {
-	height: 200px;
+    height: 200px;
 }
 
-input[id="services"]:not(:checked) ~ .wrapper .wrapper-inside .services
+input[id='services']:not(:checked) ~ .wrapper .wrapper-inside .services
 {
-	display: none;
+    display: none;
 }
 
-input[id="tv"]:not(:checked) ~ .wrapper .wrapper-inside .tv-program
+input[id='tv']:not(:checked) ~ .wrapper .wrapper-inside .tv-program
 {
-	display: none;
+    display: none;
 }
 
-input[id="auto"]:not(:checked) ~ .wrapper .wrapper-inside .shadow
+input[id='auto']:not(:checked) ~ .wrapper .wrapper-inside .shadow
 {
-	display: none;
+    display: none;
 }
 
-input[id="weather"]:not(:checked) ~ .wrapper .wrapper-inside .weather
+input[id='weather']:not(:checked) ~ .wrapper .wrapper-inside .weather
 {
-	display: none;
+    display: none;
 }
 
-input[id="poster"]:not(:checked) ~ .wrapper .wrapper-inside .poster
+input[id='poster']:not(:checked) ~ .wrapper .wrapper-inside .poster
 {
-	display: none;
+    display: none;
 }
 
-input[id="jokes"]:not(:checked) ~ .wrapper .wrapper-inside .jokes
+input[id='jokes']:not(:checked) ~ .wrapper .wrapper-inside .jokes
 {
-	display: none;
+    display: none;
 }
 
-input[id="map"]:not(:checked) ~ .wrapper .wrapper-inside .map
+input[id='map']:not(:checked) ~ .wrapper .wrapper-inside .map
 {
-	display: none;
+    display: none;
 }
 
-input[id="traffic"]:not(:checked) ~ .wrapper .wrapper-inside .traffic
+input[id='traffic']:not(:checked) ~ .wrapper .wrapper-inside .traffic
 {
-	display: none;
+    display: none;
 }
 
-input[id="services"],
-label[for="services"]
+input[id='services'],
+label[for='services']
 {
-	top: 90px;
+    top: 90px;
 }
 
-input[id="jokes"],
-label[for="jokes"]
+input[id='jokes'],
+label[for='jokes']
 {
-	top: 110px;
+    top: 110px;
 }
 
-input[id="tv"],
-label[for="tv"]
+input[id='tv'],
+label[for='tv']
 {
-	top: 130px;
+    top: 130px;
 }
 
-input[id="auto"],
-label[for="auto"]
+input[id='auto'],
+label[for='auto']
 {
-	top: 150px;
+    top: 150px;
 }
 
-input[id="weather"],
-label[for="weather"]
+input[id='weather'],
+label[for='weather']
 {
-	top: 170px;
+    top: 170px;
 }
 
-input[id="traffic"],
-label[for="traffic"]
+input[id='traffic'],
+label[for='traffic']
 {
-	top: 190px;
+    top: 190px;
 }
 
-input[id="map"],
-label[for="map"]
+input[id='map'],
+label[for='map']
 {
-	top: 210px;
+    top: 210px;
 }
 
-input[id="poster"],
-label[for="poster"]
+input[id='poster'],
+label[for='poster']
 {
-	top: 230px;
+    top: 230px;
 }
 
 body > input,
 body > label
 {
-	width: 15px;
-	display: none;
-	position: absolute;
-	right: 200px;
-	z-index: 100;
+    width: 15px;
+    display: none;
+    position: absolute;
+    right: 200px;
+    z-index: 100;
 }
 
 body > label
 {
-	width: 210px;
-	right: 180px;
+    width: 210px;
+    right: 180px;
 }
 
 .traffic img
 {
-	width: 30px;
-	vertical-align: middle;
-	margin: 0 5px;
+    width: 30px;
+    vertical-align: middle;
+    margin: 0 5px;
 }
 
 .traffic p
 {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 .map
 {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .map .taxi
 {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .map li a
 {
-	font-weight: bold;
-	font-size: 13px;
+    font-weight: bold;
+    font-size: 13px;
 }
