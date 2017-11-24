@@ -6,32 +6,33 @@
     <title>Задача «Морда»</title>
 </head>
 <body>
+    <input id="services" type="checkbox" class="column1" checked>
+    <input type="checkbox" id="jokes" class="column1" checked>
+    <input type="checkbox" id="tv" class="column2" checked>
+    <input type="checkbox" id="auto" class="column2" checked>
+    <input type="checkbox" id="weather" class="column3" checked>
+    <input type="checkbox" id="traffic" class="column3" checked>
+    <input type="checkbox" id="map" class="column3" checked>
+    <input type="checkbox" id="poster" class="column3" checked>
     <input type="checkbox" id="set" class="settings">
     <div class="settings">
         <label for="set">Настройка</label>
         <div class="popup" id="popup">
             <div class="popup-tail"></div>
             <div class="wrapper-settings">
-                <div class="settings-list"></div>
+                <ul class="settings-list">
+                    <li><label for="services">Посещаемое</label></li>
+                    <li><label for="jokes">Анекдоты</label></li>
+                    <li><label for="tv">Телепрограмма</label></li>
+                    <li><label for="auto">Автомобильные новости</label></li>
+                    <li><label for="weather">Погода</label></li>
+                    <li><label for="traffic">Пробки</label></li>
+                    <li><label for="map">Карта Екатеринбурга</label></li>
+                    <li><label for="poster">Афиша</label></li>
+                </ul>
             </div>
         </div>
     </div>
-    <input id="services" type="checkbox" class="column1" checked>
-    <label for="services">Посещаемое</label><br>
-    <input type="checkbox" id="jokes" class="column1" checked>
-    <label for="jokes">Анекдоты</label>
-    <input type="checkbox" id="tv" class="column2" checked>
-    <label for="tv">Телепрограмма</label><br>
-    <input type="checkbox" id="auto" class="column2" checked>
-    <label for="auto">Автомобильные новости</label><br>
-    <input type="checkbox" id="weather" class="column3" checked>
-    <label for="weather">Погода</label><br>
-    <input type="checkbox" id="traffic" class="column3" checked>
-    <label for="traffic">Пробки</label>
-    <input type="checkbox" id="map" class="column3" checked>
-    <label for="map">Карта Екатеринбурга</label><br>
-    <input type="checkbox" id="poster" class="column3" checked>
-    <label for="poster">Афиша</label><br>
 
     <div class="city"><div class="char">&#10148;</div> Екатеринбург</div>
     <div class="wrapper">
@@ -45,7 +46,7 @@
             <a href="#">Музыка</a>
             <a href="#">Еще</a>
             <form method="get">
-                <input name="s" type="search">
+                <input name="s" type="search" autofocus>
                 <button type="submit">Найти</button>
             </form>
             Найдется все. Например, <span>выхожу один я на дорогу</span>
@@ -81,7 +82,7 @@
         </div>
         <div class="wrapper-inside" id="inside">
             <div id="column-1">
-                <div class="services style">
+                <div class="services widget">
                     <h1><a href="#">Посещаемое</a></h1>
                     <ul>
                         <li><a href="#" class="bold">Маркет</a> &mdash; <a href="#">микроволновые печи LG
@@ -98,7 +99,7 @@
                         <li><a href="#" class="bold">Видео</a> &mdash; <a href="#">про природу</a></li>
                     </ul>
                 </div>
-                <div class="jokes style">
+                <div class="jokes widget">
                     <input type="radio" id="1" name="switcher" checked>
                     <input type="radio" id="2" name="switcher">
                     <input type="radio" id="3" name="switcher">
@@ -139,7 +140,7 @@
                 </div>
             </div>
             <div id="column-2">
-                <div class="tv-program style">
+                <div class="tv-program widget">
                     <h1><a href="#">Телепрограмма</a>
                         <button type="submit">ТВ онлайн &#9658;</button>
                     </h1>
@@ -176,11 +177,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="shadow style">
+                <div class="shadow widget">
                     <div class="shadow-top"></div>
                     <div class="shadow-bottom"></div>
                     <h1><a href="#">Автомобильные новости</a></h1>
-                    <div class="auto style">
+                    <div class="auto">
                         <ul>
                             <li><a href="#">Правительство поддержало законопроект о регистрации 
                                 машиномест</a><span class="time">12:19</span></li>
@@ -208,7 +209,7 @@
                 </div>
             </div>
             <div id="column-3">
-                <div class="weather style">
+                <div class="weather widget">
                     <h1><a href="#">Погода</a>
                         <img src="images/snow.ico" alt="snow">
                         −3 °C
@@ -217,21 +218,21 @@
                         <li><a href="#">Ночь -3</a>, <a href="#">утро -2</a></li>
                     </ul>
                 </div>
-                <div class="traffic style">
+                <div class="traffic widget">
                     <h1><a href="#">Пробки</a>
                         <img src="images/traffic.png" alt="traffic">
                         1 балл
                     </h1>
                     <p>Местами затруднения</p>
                 </div>
-                <div class="map style">
+                <div class="map widget">
                     <h1><a href="#">Карта Екатеринбурга</a></h1>
                     <ul>
                         <li><a href="#" class="taxi">Такси</a><a href="#">Расписания</a></li>
                         <li><a href="#">Междугородные автобусы</a></li>
                     </ul>
                 </div>
-                <div class="poster style">
+                <div class="poster widget">
                     <h1><a href="#">Афиша</a></h1>
                     <ul>
                         <li><a href="#">Тор: Рагнарёк</a><a class="category">фэнтези</a></li>

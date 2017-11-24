@@ -2,17 +2,13 @@
 {
     display: grid;
     grid-template-columns: 200px 1fr 1fr 1fr 200px;
-    margin-top: -30px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     grid-template-rows: 220px 100px 110px 220px 220px;
 }
 
-.column1:not(:checked) ~ .column1:not(:checked) ~ .wrapper #column-1
-{
-    display: none;
-}
-
+.column1:not(:checked) ~ .column1:not(:checked) ~ .wrapper #column-1,
 .column2:not(:checked) ~ .column2:not(:checked) ~ .wrapper #column-2
 {
     display: none;
@@ -133,13 +129,15 @@ html
 .search button
 {
     background: yellow;
-    border: 3px solid yellow;
+    border: 1px solid yellow;
 }
 
 .search input
 {
     width: 90%;
     border: 2px solid yellow;
+    height: 36px;
+    padding-left: 10px;
 }
 
 .search input:focus
@@ -180,6 +178,7 @@ html
 {
     grid-column: 2/5;
     grid-row: 3/4;
+    padding-top: 10px;
 }
 
 .advertising img
@@ -214,7 +213,7 @@ html
     padding: 5px;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: -40px;
     width: 200px;
     border-radius: 2%;
 }
@@ -277,6 +276,7 @@ li
 body
 {
     position: relative;
+    padding: 30px;
 }
 
 body a:hover
@@ -284,19 +284,24 @@ body a:hover
     color: #cc0808;
 }
 
-.style a
+.widget
+{
+    margin-bottom: 30px;
+}
+
+.widget a
 {
     text-decoration: none;
     color: #0054b9;
     font-family: sans-serif;
 }
 
-.style h1 a
+.widget h1 a
 {
     font-size: 16px;
 }
 
-.style ul a
+.widget ul a
 {
     font-size: 12px;
 }
@@ -307,13 +312,13 @@ h1
     font-size: 16px;
 }
 
-.style ul
+.widget ul
 {
     list-style: none;
     margin-top: 10px;
 }
 
-.style ul a
+.widget ul a
 {
     color: #000;
 }
@@ -323,13 +328,7 @@ h1
     font-weight: bold;
 }
 
-.services,
-.poster
-{
-    margin-bottom: 30px;
-}
-
-.style li
+.widget li
 {
     margin-bottom: 5px;
 }
@@ -343,13 +342,6 @@ h1
 .tv-program a.channel
 {
     color: #808080;
-}
-
-.tv-program,
-.weather,
-.map
-{
-    margin-bottom: 20px;
 }
 
 .tv-program button
@@ -396,9 +388,9 @@ h1
 .shadow .shadow-top
 {
     position: absolute;
-    background: linear-gradient(#f7f8f9, #fff);
+    background: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0));
     opacity: .8;
-    height: 20px;
+    height: 40px;
     top: 10%;
     left: 0;
     right: 0;
@@ -412,9 +404,9 @@ h1
 .shadow .shadow-bottom
 {
     position: absolute;
-    background: linear-gradient(#fff, #f7f8f9);
+    background: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 1));
     opacity: .8;
-    height: 20px;
+    height: 50px;
     bottom: 15px;
     left: 0;
     right: 0;
@@ -481,7 +473,15 @@ h1
 .jokes input[id='2']:checked ~ label:not([for='3']),
 .jokes input[id='3']:checked ~ label:not([for='4']),
 .jokes input[id='4']:checked ~ label:not([for='5']),
-.jokes input[id='5']:checked ~ label:not([for='1'])
+.jokes input[id='5']:checked ~ label:not([for='1']),
+input[id='services'],
+input[id='jokes'],
+input[id='tv'],
+input[id='auto'],
+input[id='weather'],
+input[id='traffic'],
+input[id='map'],
+input[id='poster']
 {
     display: none;
 }
@@ -520,7 +520,7 @@ h1
 {
     width: 100px;
     position: absolute;
-    right: 250px;
+    right: 170px;
     top: 10px;
 }
 
@@ -534,13 +534,18 @@ input.settings
     cursor: pointer;
 }
 
-input.settings:checked + .settings .popup
+.settings-list li
 {
-    display: block;
+    margin-bottom: 5px;
 }
 
-input.settings:checked ~ input,
-input.settings:checked ~ label
+.settings-list
+{
+    list-style: none;
+
+}
+
+input.settings:checked + .settings .popup
 {
     display: block;
 }
@@ -571,129 +576,43 @@ input.settings:checked ~ label
     border-right: 1px solid #ccc;
 }
 
-.popup input
-{
-    display: inline-block;
-    z-index: 0;
-}
-
-.settings-list input
-{
-    width: 15px;
-}
-
-.settings .wrapper-settings
-{
-    position: relative;
-}
-
-.settings-list
-{
-    height: 200px;
-}
-
-input[id='services']:not(:checked) ~ .wrapper .wrapper-inside .services
-{
-    display: none;
-}
-
-input[id='tv']:not(:checked) ~ .wrapper .wrapper-inside .tv-program
-{
-    display: none;
-}
-
-input[id='auto']:not(:checked) ~ .wrapper .wrapper-inside .shadow
-{
-    display: none;
-}
-
-input[id='weather']:not(:checked) ~ .wrapper .wrapper-inside .weather
-{
-    display: none;
-}
-
-input[id='poster']:not(:checked) ~ .wrapper .wrapper-inside .poster
-{
-    display: none;
-}
-
-input[id='jokes']:not(:checked) ~ .wrapper .wrapper-inside .jokes
-{
-    display: none;
-}
-
-input[id='map']:not(:checked) ~ .wrapper .wrapper-inside .map
-{
-    display: none;
-}
-
+input[id='services']:not(:checked) ~ .wrapper .wrapper-inside .services,
+input[id='tv']:not(:checked) ~ .wrapper .wrapper-inside .tv-program,
+input[id='auto']:not(:checked) ~ .wrapper .wrapper-inside .shadow,
+input[id='weather']:not(:checked) ~ .wrapper .wrapper-inside .weather,
+input[id='poster']:not(:checked) ~ .wrapper .wrapper-inside .poster,
+input[id='jokes']:not(:checked) ~ .wrapper .wrapper-inside .jokes,
+input[id='map']:not(:checked) ~ .wrapper .wrapper-inside .map,
 input[id='traffic']:not(:checked) ~ .wrapper .wrapper-inside .traffic
 {
     display: none;
 }
 
-input[id='services'],
-label[for='services']
+input[id='services']:not(:checked) ~ .settings label[for='services']:before,
+input[id='tv']:not(:checked) ~ .settings label[for='tv']:before,
+input[id='auto']:not(:checked) ~ .settings label[for='auto']:before,
+input[id='weather']:not(:checked) ~ .settings label[for='weather']:before,
+input[id='poster']:not(:checked) ~ .settings label[for='poster']:before,
+input[id='jokes']:not(:checked) ~ .settings label[for='jokes']:before,
+input[id='map']:not(:checked) ~ .settings label[for='map']:before,
+input[id='traffic']:not(:checked) ~ .settings label[for='traffic']:before
 {
-    top: 90px;
+    content: url(images/not_check.png);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-input[id='jokes'],
-label[for='jokes']
+.settings-list label:before
 {
-    top: 110px;
-}
-
-input[id='tv'],
-label[for='tv']
-{
-    top: 130px;
-}
-
-input[id='auto'],
-label[for='auto']
-{
-    top: 150px;
-}
-
-input[id='weather'],
-label[for='weather']
-{
-    top: 170px;
-}
-
-input[id='traffic'],
-label[for='traffic']
-{
-    top: 190px;
-}
-
-input[id='map'],
-label[for='map']
-{
-    top: 210px;
-}
-
-input[id='poster'],
-label[for='poster']
-{
-    top: 230px;
-}
-
-body > input,
-body > label
-{
-    width: 15px;
-    display: none;
-    position: absolute;
-    right: 200px;
-    z-index: 100;
-}
-
-body > label
-{
-    width: 210px;
-    right: 180px;
+    content: url(images/check.png);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .traffic img
@@ -706,11 +625,6 @@ body > label
 .traffic p
 {
     margin-top: 10px;
-}
-
-.map
-{
-    margin-top: 20px;
 }
 
 .map .taxi
